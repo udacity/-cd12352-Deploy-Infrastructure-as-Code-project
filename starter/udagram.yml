@@ -1,0 +1,24 @@
+Description: ND9991 - Course 2 - Infrastructure as Code Project - Udagram
+
+Parameters:
+  # Add your parameters here
+
+Resources:
+  # Add your resources here
+  # We include a portion of the LaunchTemplate resource so you can use the UserData.
+  # Remember to replace the PUT_YOUR_BUCKET_NAME_HERE placeholder with the name of
+  # your S3 bucket.
+  WebAppLaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties: 
+      LaunchTemplateData:
+        UserData:
+          Fn::Base64: |
+            #!/bin/bash
+            apt-get update -y
+            apt-get install apache2 awscli -y
+            systemctl start apache2.service
+            cd /var/www/html
+            echo "Udacity Demo Web Server is Up and Running!" > index.html
+            EC2_INSTANCE_ID="`wget -q -O - http://169.254.169.254/latest/meta-data/instance-id`"
+            aws s3 cp "index.html" "s3://PUT_YOUR_BUCKET_NAME_HERE/$EC2_INSTANCE_ID.txt"

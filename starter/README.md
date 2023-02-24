@@ -1,3 +1,11 @@
-# Purpose of this Folder
+# ND9991 - Course 2 - Infrastructure as Code Project Solution
+# [YOUR NAME HERE]
 
-This folder should contain the scaffolded project files to get a student started on their project. This repo will be added to the Classroom for students to use, so please do not have any solutions in this folder.
+## Spin up instructions
+TODO
+
+## Tear down instructions
+TODO
+
+## Other considerations
+TODO (optional)
