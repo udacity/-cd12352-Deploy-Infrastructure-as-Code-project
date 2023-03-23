@@ -1,4 +1,4 @@
-# ND9991 - Course 2 - Infrastructure as Code Project Solution
+# CD12352 - Infrastructure as Code Project Solution
 # [YOUR NAME HERE]
 
 ## Spin up instructions

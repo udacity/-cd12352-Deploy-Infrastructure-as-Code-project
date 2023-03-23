@@ -1,4 +1,4 @@
-Description: ND9991 - Course 2 - Infrastructure as Code Project - Udagram
+Description: CD12352 - Infrastructure as Code Project - Udagram
 
 Parameters:
   # Add your parameters here
@@ -14,7 +14,5 @@ Resources:
           Fn::Base64: |
             #!/bin/bash
             apt-get update -y
-            apt-get install apache2 awscli -y
-            systemctl start apache2.service
-            cd /var/www/html
-            echo "Udacity Demo Web Server is Up and Running!" > index.html
+            sudo apt-get install nginx -y
+            service nginx start
